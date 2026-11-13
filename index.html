@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Undangan Pernikahan </title>
+
+        <!-- Mengubungkan file CSS eksternal -->
+         <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- 1. bagian sampul/ pembuka (hero section) -->
+         <div id="cover-section" class="cover">
+            <h1>Undangan Pernikahan</h1>
+            <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
+            <h2>Nama Tamu Undangan</h2>
+            <p>Kami Mengundang Anda untuk hadir di acara Pernikahan kami.</p>
+
+            <!-- Tombol untuk membuka undangan ( menggunakan tag Link/anchor standar)-->
+             <button onclick="BukaUndangan()">Buka Undangan</button>
+         </div>
+         <div id="main-content" class="hidden">
+         
+         <!-- 2. Bagian Informasi Mempelai -->
+          <section>
+            <h2> Pengantin Bahagia</h2>
+            <div>
+                <p>"demikian mereka bukan lagi dua, melainkan satu. karena itu, 
+                    apa yang telah dipersatukan Allah, tidak boleh di cerikan manusia"</p>
+                <h3>Nama Pengantin Pria</h3>
+                <p>Putra dari Bapak [...] dan Ibu [...]</p>    
+            </div>
+            <p>&amp;</p>
+            <div>
+                <h3>Nama Pengantin wanita</h3>
+                <p>Putri dari Bapak [...] dan Ibu [...]</p>
+            </div>
+          </section>
+
+          <!-- 3. Bagian Detail acara -->
+           <section>
+            <h2>Detail Acara</h2>
+            <div>
+                <h3>Pemberkatan</h3>
+                <p>Hari/Tanggal: Jumat, 20 Agustus 2027</p>
+                <p>Pukul: 10.00 WITA - Selesai</p>
+                <p>Tempat: Paroki St. Paulus Oinlasi</p>
+            </div>
+            <div>
+                <h3>Resepsi</h3>
+                <p>Hari/Tanggal: Jumat, 20 Agustus 2027</p>
+                <p>Pukul: 19.00 WITA - Selesai</p>
+                <p>Tempat: Rumah Bpk. Anton Sesko</p>
+            </div>
+            <a href="" target="_blank">Lihat Lokasi di Google Maps</a>
+           </section>
+
+           <hr>
+
+           <!-- 4. Bagian Konfirmasi  Kehadiran (RSVP) -->
+            <section>
+                <h2> konfirmasi Kehadiran (RSVP)</h2>
+                <p>silahkan lakukan konfirmasi kehadiran melalui tombol di bawah:</p>
+                <a href="" target="_blank"> konfirmasi via whatsApp</a>
+            </section>
+
+            <!-- bagian galeri foto prewedding -->
+             <section>
+                <h2>Galeri Prewedding</h2>
+                <p> Momen Kebersamaan Kami menuju hari bahagia</p>
+                <div class="galeri-grid">
+                    <img src="foto prewedding/backround cover.jpg" alt="Foto Prewedding 1">
+                    <img src="foto prewedding/prewed1.jpg" alt="Foto Prewedding 2">
+                    <img src="foto prewedding/prewed2.jpg" alt="Foto Prewedding 3">
+                    <img src="foto prewedding/prewed3.jpg" alt="Foto Prewedding 4">
+                </div>
+             </section>
+            <!-- Bagian Penutup/ Footer -->
+             <footer class="penutup-undangan">
+
+                <!-- ucapan terima kasih -->
+                 <div class="ucapan-terimakasih">
+                    <p>Atas Kehadiran Bapak/Ibu?Saudara/i kami ucapkan terima kasih, Tuhan Memberkati...</p>
+                 </div>
+
+                 <!-- Turut Mengundang (kiri:pria, Kanan: wanita)-->
+                  <div class="turut-mengundang">
+                    <h3>Turut Mengundang</h3>
+                    <div class="keluarga-container">
+                        <!-- sebelah kiri Keluarga mempelai Pria -->
+                         <div class="keluarga-kolom">
+                            <h4> Keluarga Mempelai Pria</h4>
+                            <p>bapak [...]&amp; Ibu [...]</p>
+                            <p>Bapak [...]</p>
+                            <p>Keluarga Besar [...]</p>
+                         </div>
+                        
+                         <!-- sebelah Kanan: Keluarga Mempelai Wanita -->
+                        <div class="keluarga-kolom">
+                            <h4> Keluarga Mempelai Wanita</h4>
+                            <p>bapak [...]&amp; Ibu [...]</p>
+                            <p>Bapak [...]</p>
+                            <p>Keluarga Besar [...]</p>
+                         </div> 
+                    </div>
+                  </div>
+                  <div class="yang-berbahagia">
+                    <p>Yang Berbahagia,</p>
+                    <h2>Nama Mempelai Pria &amp; Nama Mempelai Wanita</h2>
+                  </div>
+                
+                <button onclick="tutupUndangan()" class="btn-kembali">Kembali Ke cover</button>
+             </footer>
+        </div>
+        <p>&copy; 2027 Pernikahan Kami</p>
+        <script src="javaScript.js"></script>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin Undangan Digital</title>
+    <link rel="stylesheet" href="styletamuundangan.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="topbar-content">
+            <h1>Dashboard Pengirim Undangan</h1>
+            <span class="badge">Multi-Acara &amp; Live Preview</span>
+        </div>
+    </header>
+
+    <main class="dashboard-layout">
+        
+        <!-- KOLOM KIRI: FORMULIR PENGATURAN & INPUT TAMU -->
+        <section class="panel-kontrol">
+            <div class="card">
+                <h2>1. Hubungkan Link Undangan</h2>
+                <p class="desc">Masukkan alamat link website undangan (Pernikahan, Ulang Tahun, Syukuran, dll) atau pilih dari file lokal Anda.</p>
+
+                <label for="pilih-preset">Pilih Cepat Template Lokal (Opsional):</label>
+                <select id="pilih-preset" onchange="pilihPresetLokal()">
+                    <option value="">-- Masukkan Link Manual di Bawah --</option>
+                    <option value="index.html">Undangan Pernikahan (index.html)</option>
+                    <option value="ulang-tahun.html">Undangan Ulang Tahun (ulang-tahun.html)</option>
+                    <option value="syukuran.html">Undangan Syukuran (syukuran.html)</option>
+                </select>
+
+                <label for="input-url">Link Website Undangan Utama:</label>
+                <div class="input-group">
+                    <input type="text" id="input-url" placeholder="Contoh: https://undangan-nikah.com/index.html">
+                    <button type="button" class="btn-muat" onclick="muatWebsiteUndangan()">Muat Web</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>2. Isi Nama Tamu &amp; Pesan</h2>
+                
+                <label for="jenis-acara">Tema Kata Pengantar WhatsApp:</label>
+                <select id="jenis-acara" onchange="ubahTemplatePesan()">
+                    <option value="nikah">Pernikahan (Formal)</option>
+                    <option value="ultah">Ulang Tahun (Santai)</option>
+                    <option value="syukuran">Syukuran / Acara Umum</option>
+                </select>
+
+                <label for="input-nama">Nama Tamu Undangan:</label>
+                <input type="text" id="input-nama" placeholder="Ketik nama tamu... (Contoh: Bpk. Yohanes & Keluarga)" oninput="updateLivePreview()">
+
+                <label for="template-pesan">Edit Teks Pengantar WhatsApp:</label>
+                <textarea id="template-pesan" rows="5" oninput="updateLivePreview()"></textarea>
+
+                <!-- Kotak Hasil Link & Tombol Kirim -->
+                <div id="box-aksi" class="box-aksi">
+                    <label>Link Khusus Tamu Siap Kirim:</label>
+                    <div id="hasil-link" class="link-preview">Belum ada link dimuat...</div>
+                    
+                    <div class="tombol-grup">
+                        <button type="button" class="btn-salin" onclick="salinPesan()">Salin Teks &amp; Link</button>
+                        <a id="btn-kirim-wa" class="btn-wa" href="#" target="_blank">Kirim ke WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KOLOM KANAN: PRATINJAU LANGSUNG (LIVE PREVIEW LAYAR HP) -->
+        <section class="panel-preview">
+            <div class="preview-header">
+                <h3>Pratinjau Tampilan di HP Tamu</h3>
+                <span id="status-preview" class="status-dot">Menunggu Link...</span>
+            </div>
+            
+            <div class="mockup-hp">
+                <div class="mockup-speaker"></div>
+                <iframe id="iframe-undangan" src="about:blank" title="Pratinjau Undangan"></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="javascripttamuundangan.js"></script>
+</body>
+</html>

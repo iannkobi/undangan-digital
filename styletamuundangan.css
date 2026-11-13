@@ -1,0 +1,285 @@
+/* --- IMPORT FONT MODERN --- */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #fcf8f7; /* Nuansa krem lembut khas undangan */
+    color: #2d2d2d;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* --- TOPBAR / HEADER --- */
+.topbar {
+    background: linear-gradient(135deg, #5c4033 0%, #3e2723 100%);
+    color: #ffffff;
+    padding: 22px 30px;
+    box-shadow: 0 4px 20px rgba(92, 64, 51, 0.15);
+}
+
+.topbar-content {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.topbar h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.badge {
+    background-color: #bfa15f;
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(191, 161, 95, 0.3);
+}
+
+/* --- LAYOUT UTAMA 2 KOLOM --- */
+.dashboard-layout {
+    max-width: 1250px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* --- KARTU KONTROL (KIRI) --- */
+.card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(92, 64, 51, 0.05);
+    margin-bottom: 24px;
+    border: 1px solid #f0e6d6;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 14px 35px rgba(92, 64, 51, 0.08);
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    color: #5c4033;
+    margin-bottom: 6px;
+    font-weight: 700;
+    border-bottom: 2px solid #fcf8f7;
+    padding-bottom: 10px;
+}
+
+.desc {
+    font-size: 0.88rem;
+    color: #777777;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4a4a4a;
+    margin-bottom: 8px;
+}
+
+input[type="text"], select, textarea {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid #e0d5c7;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+    font-family: inherit;
+    background-color: #fdfbfb;
+    color: #333333;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #bfa15f;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(191, 161, 95, 0.1);
+}
+
+.input-group {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.input-group input {
+    margin-bottom: 0;
+}
+
+.btn-muat {
+    background-color: #5c4033;
+    color: #ffffff;
+    border: none;
+    padding: 0 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-muat:hover {
+    background-color: #4a3328;
+}
+
+.btn-muat:active {
+    transform: scale(0.97);
+}
+
+/* --- KOTAK AKSI & HASIL LINK --- */
+.box-aksi {
+    background-color: #fcf8f7;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #f0e6d6;
+    margin-top: 5px;
+}
+
+.link-preview {
+    background: #ffffff;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px dashed #bfa15f;
+    font-size: 0.85rem;
+    color: #5c4033;
+    word-break: break-all;
+    margin-bottom: 16px;
+    font-family: monospace;
+}
+
+.tombol-grup {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-salin, .btn-wa {
+    flex: 1;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.btn-salin {
+    background-color: #78716c;
+    color: #ffffff;
+}
+
+.btn-salin:hover {
+    background-color: #57534e;
+}
+
+.btn-wa {
+    background-color: #25D366;
+    color: #ffffff;
+}
+
+.btn-wa:hover {
+    background-color: #20ba5a;
+    transform: translateY(-1px);
+}
+
+/* --- PANEL PREVIEW MOCKUP HP (KANAN) --- */
+.panel-preview {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(92, 64, 51, 0.05);
+    border: 1px solid #f0e6d6;
+    position: sticky;
+    top: 25px;
+    text-align: center;
+}
+
+.preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.preview-header h3 {
+    font-size: 1.1rem;
+    color: #5c4033;
+    font-weight: 700;
+}
+
+.status-dot {
+    font-size: 0.78rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background-color: #f1f1f1;
+    color: #666666;
+    font-weight: 600;
+}
+
+.status-dot.aktif {
+    background-color: #e6f4ea;
+    color: #137333;
+}
+
+.mockup-hp {
+    width: 100%;
+    max-width: 340px;
+    height: 600px;
+    margin: 0 auto;
+    border: 12px solid #2d2d2d;
+    border-radius: 36px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    position: relative;
+}
+
+.mockup-speaker {
+    width: 65px;
+    height: 5px;
+    background-color: #4a4a4a;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+.mockup-hp iframe {
+    width: 100%;
+    height: calc(100% - 25px);
+    border: none;
+    background: #ffffff;
+}
+
+/* --- RESPONSIF DI LAYAR HP --- */
+@media (max-width: 900px) {
+    .dashboard-layout {
+        grid-template-columns: 1fr;
+    }
+    .panel-preview {
+        position: static;
+    }
+}
